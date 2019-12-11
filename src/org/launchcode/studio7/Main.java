@@ -1,12 +1,30 @@
 package org.launchcode.studio7;
 
-public class Main {
+import java.util.ArrayList;
+
+public class  Main {
 
     public static void main(String[] args){
 
-        // TODO: Declare and initialize a CD and a DVD object.
+CD myCd = new CD("Blank CD", 737, "CD");
+DVD myDvd = new DVD("Blank blue ray DVD", 25000, "Blu Ray DVD");
 
-        // TODO: Call each CD and DVD method to verify that they work as expected.
+myDvd.spinDisc();
+
+myCd.spinDisc();
+
+myDvd.loadDisc();
+System.out.println(myDvd.writeToDisc(24999));
+System.out.println(myDvd.writeToDisc(2));
+
+ArrayList<String> aTrack = new ArrayList();
+aTrack.add(0, "beep boop");
+myCd.setContents(aTrack);
+myCd.loadDisc();
+myCd.getContents();
+
+
+
 
     }
 }
